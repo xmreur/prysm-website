@@ -10,7 +10,7 @@ const HowItWorks = () => {
                         <span className="text-gradient">works</span>
                     </h2>
                     <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-                        End-to-End encryption meets Tor's onion routing.
+                        End-to-End encryption meets Tor&apos;s onion routing.
                         Messages travel directly between peers with zero intermediaries.
                     </p>
                 </div>
