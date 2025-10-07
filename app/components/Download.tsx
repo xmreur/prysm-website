@@ -132,7 +132,7 @@ const Download = () => {
                         </div>
                         
                         <div className="w-full flex items-start gap-5">
-                            <Image src={LTCLogo} alt="TON" className="h-7 w-7 text-accent flex-shrink-0 mt-1" />
+                            <Image src={LTCLogo} alt="LTC" className="h-7 w-7 text-accent flex-shrink-0 mt-1" />
                             <span className="font-bold text-2xl  break-all">LTC: ltc1qnsp6alkn2gzd4vpekya05l2caa3aqfmk9m7882</span>
                         </div>
                     </div>

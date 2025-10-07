@@ -40,7 +40,7 @@ const Footer = () => {
                 </div>
                     <div className="pt-8 border-t border-border/30 flex flex-col md:flex-row justify-between items-center gap-4">
                         <p className="text-sm text-muted-foreground">
-                            © 2025 Prysm • MIT License
+                            © 2025 Prysm • GPL License
                         </p>
                         <a 
                             href="https://github.com/xmreur/prysm"
