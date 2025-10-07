@@ -1,5 +1,12 @@
-import { Download as _Download, CircleAlert, FileText, Github, MessageCircle } from "lucide-react";
+import { Download as _Download, Bitcoin, CircleAlert, DollarSign, FileText, Github, MessageCircle } from "lucide-react";
 
+import SolanaLogo from '@/public/solana-sol-logo.svg';
+import EthereumLogo from '@/public/ethereum-eth-logo.svg';
+import XRPLogo from '@/public/xrp-xrp-logo.svg';
+import MoneroLogo from '@/public/monero-xmr-logo.svg';
+import TonLogo from '@/public/toncoin-ton-logo.svg';
+import LTCLogo from '@/public/litecoin-ltc-logo.svg';
+import Image from "next/image";
 
 const Download = () => {
 
@@ -84,6 +91,50 @@ const Download = () => {
                             <FileText className="mr-2 h-4 w-4" />
                             Contributing
                         </a>
+                    </div>
+                </div>
+
+                <div className="glass-strong mt-10 rounded-2xl p-6 mb-12 border border-accent-30">
+                    <div className="flex items-start gap-4">
+                        <DollarSign className="h-6 w-6 text-accent flex-shrink-0 mt-1" />
+                        <div>
+                            <h4 className="font-bold mb-2 text-lg">Support Us</h4>
+                            <p className="text-sm text-muted-foreground leading-relaxed">
+                                Our app is free to use, but if you&apos;d like to support our work, donations are greatly appreciated. Your contributions help us continue improving Prysm.
+                            </p>
+                        </div>
+                        
+                    </div>
+                    <div className="flex flex-col items-start gap-4 mt-6">
+                        <div className="w-full flex items-start gap-5">
+                            <Bitcoin className="h-8 w-8 text-accent flex-shrink-0 mt-1" />
+                            <span className="font-bold text-2xl  break-all">BTC: bc1qev0zu7rnske4ee7as0t4tyh56uv6v0ga62wx8r</span>
+                        </div>
+                        <div className="w-full flex items-start gap-5">
+                            <Image src={SolanaLogo} alt="SOL" className="h-7 w-7 text-accent flex-shrink-0 mt-1" />
+                            <span className="font-bold text-2xl  break-all">SOL: 2S6tZNNUH5sPp9PqszQ4XK4MN44SvLCkTwNuCVvRvtEP</span>
+                        </div>
+                        <div className="w-full flex items-start gap-5">
+                            <Image src={EthereumLogo} alt="Ethereum" className="h-7 w-7 text-accent flex-shrink-0 mt-1" />
+                            <span className="font-bold text-2xl break-all">ETH: 0x2934955fe95059ea470E0B81519BA59432eFe77a</span>
+                        </div>
+                        <div className="w-full flex items-start gap-5">
+                            <Image src={XRPLogo} alt="XRP" className="h-7 w-7 text-accent flex-shrink-0 mt-1" />
+                            <span className="font-bold text-2xl  break-all">XRP: rHfoRsLjXrbAqxa7nJcXz6XdxDZm8M3sJT</span>
+                        </div>
+                        <div className="w-full flex items-start gap-5">
+                            <Image src={MoneroLogo} alt="Monero" className="h-7 w-7 text-accent flex-shrink-0 mt-1" />
+                            <span className="font-bold text-sm break-all">XMR: 47ndq7fCdW9jTGKtXafwMgDJjxAw3cnWwjR6eq31pfXXKfqNHXq5w4B2D49oTKnTHGCRCgcU6D24oiyUD8Ha7iEJLCPGJsC</span>
+                        </div>
+                        <div className="w-full flex items-start gap-5">
+                            <Image src={TonLogo} alt="TON" className="h-7 w-7 text-accent flex-shrink-0 mt-1" />
+                            <span className="font-bold text-2xl  break-all">TON: UQDEeapruNlAmSt9j4J9CNiuasJbF3OlCxzTZPJiq6hzKOFu</span>
+                        </div>
+                        
+                        <div className="w-full flex items-start gap-5">
+                            <Image src={LTCLogo} alt="TON" className="h-7 w-7 text-accent flex-shrink-0 mt-1" />
+                            <span className="font-bold text-2xl  break-all">LTC: ltc1qnsp6alkn2gzd4vpekya05l2caa3aqfmk9m7882</span>
+                        </div>
                     </div>
                 </div>
             </div>

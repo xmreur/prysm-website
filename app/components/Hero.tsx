@@ -1,4 +1,5 @@
 import { Download, Github } from "lucide-react";
+import Image from "next/image";
 
 const Hero = () => {
     return (
@@ -64,7 +65,7 @@ const Hero = () => {
                     <div className="relative lg:scale-110 animate-fade-in">
                         <div className="absolute -inset-4 bg-primary/20 rounded-full blur-3xl animate-glow-pulse"></div>
                         <div className="relative">
-                            <img src="/prysm-mockup.png" alt="" className="relative z-10 mx-auto max-w-sm lg:max-w-md drop-shadow-2xl" />
+                            <Image alt="mockup" src="/prysm-mockup.png" width={904} height={680} className="relative z-10 mx-auto max-w-sm lg:max-w-md drop-shadow-2xl" />
                         </div>
                     </div>
                 </div>

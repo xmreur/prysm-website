@@ -16,7 +16,7 @@ const HowItWorks = () => {
                 </div>
                 <div className="mb-24">
                     <div className="glass-strong rounded-[2rem] p-12 max-w-4xl mx-auto">
-                        <div className="flex items-center justify-center gap-8 flex-wrap">
+                        <div className="flex flex-col md:flex-row items-center justify-center gap-8 flex-wrap">
                             <div className="flex flex-col items-center gap-4 flex-1 min-w-[140px]">
                                 <div className="w-20 h-20 rounded-2xl glass flex items-center justify-center text-4xl">
                                     👤
@@ -24,7 +24,8 @@ const HowItWorks = () => {
                                 <span className="text-sm font-semibold uppercase tracking-wider">Your device</span>
                             </div>
 
-                            <div className="text-primary text-3xl font-light">→</div>
+                            <div className="text-primary text-3xl font-light hidden md:inline">→</div>
+                            <div className="text-primary text-3xl font-light display md:hidden">↓</div>
 
                             <div className="flex flex-col items-center gap-4 flex-1 min-w-[140px]">
                                 <div className="w-20 h-20 rounded-2xl bg-primary/10 flex items-center justify-center text-4xl animate-glow-pulse border border-primary/30">
@@ -33,7 +34,8 @@ const HowItWorks = () => {
                                 <span className="text-sm font-semibold uppercase tracking-wider">TOR NETWORK</span>
                             </div>
 
-                            <div className="text-primary text-3xl font-light">→</div>
+                            <div className="text-primary text-3xl font-light hidden md:inline">→</div>
+                            <div className="text-primary text-3xl font-light display md:hidden">↓</div>
 
                             <div className="flex flex-col items-center gap-4 flex-1 min-w-[140px]">
                                 <div className="w-20 h-20 rounded-2xl glass flex items-center justify-center text-4xl">
