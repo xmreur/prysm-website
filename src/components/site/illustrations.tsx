@@ -39,43 +39,42 @@ export function ChatMockup({ className }: { className?: string }) {
       fill="none"
       className={className}
       aria-hidden="true"
+      style={{ fontFamily: 'Inter, system-ui, -apple-system, sans-serif' }}
     >
       {/* phone frame */}
       <rect x="40" y="8" width="280" height="424" rx="38" fill="var(--card)" stroke={BORDER} strokeWidth="1.5" />
       <rect x="150" y="22" width="60" height="6" rx="3" fill={BORDER} />
 
-      {/* header */}
+      {/* header — peer name + encrypted lock badge */}
       <rect x="56" y="52" width="248" height="44" rx="12" fill={BLUE_SOFT} />
       <circle cx="80" cy="74" r="11" fill={BLUE} />
-      <rect x="100" y="68" width="92" height="7" rx="3.5" fill={FG} opacity="0.85" />
-      <rect x="100" y="80" width="56" height="5" rx="2.5" fill={MUTED} />
-      <rect x="270" y="68" width="22" height="12" rx="6" fill={BLUE} opacity="0.25" />
+      <text x="100" y="72" fontSize="13" fontWeight="600" fill={FG}>Giulia</text>
+      <text x="100" y="86" fontSize="10" fill={MUTED}>online</text>
+      <circle cx="280" cy="74" r="12" fill={BLUE} fillOpacity="0.15" />
+      <rect x="275" y="72" width="10" height="8" rx="1.6" fill={BLUE} />
+      <path d="M277.5 72 v-1.6 a2.5 2.5 0 0 1 5 0 V72" stroke={BLUE} strokeWidth="1.3" fill="none" />
 
-      {/* messages */}
-      {/* received */}
-      <rect x="64" y="116" width="180" height="34" rx="14" fill={BLUE_SOFT} />
-      <rect x="78" y="127" width="120" height="6" rx="3" fill={MUTED} />
-      <rect x="78" y="138" width="86" height="6" rx="3" fill={MUTED} />
+      {/* conversation — Giulia (received) & Marco (sent) */}
 
-      {/* sent (encrypted, brand blue) */}
-      <rect x="150" y="166" width="146" height="34" rx="14" fill={BLUE} />
-      <rect x="164" y="177" width="96" height="6" rx="3" fill="white" opacity="0.9" />
-      <rect x="164" y="188" width="64" height="6" rx="3" fill="white" opacity="0.7" />
-      {/* tiny lock on sent bubble */}
-      <g transform="translate(276,178)">
-        <rect x="0" y="4" width="11" height="9" rx="2" fill="white" opacity="0.9" />
-        <path d="M2.5 4 V2.5 a3 3 0 0 1 6 0 V4" stroke="white" strokeWidth="1.3" fill="none" />
-      </g>
+      {/* msg 1 — Giulia */}
+      <text x="66" y="126" fontSize="10" fontWeight="600" fill={MUTED}>Giulia</text>
+      <rect x="64" y="130" width="150" height="34" rx="14" fill={BLUE_SOFT} />
+      <text x="76" y="151" fontSize="12" fill={FG}>hai provato prysm?</text>
 
-      {/* received */}
-      <rect x="64" y="216" width="150" height="34" rx="14" fill={BLUE_SOFT} />
-      <rect x="78" y="227" width="100" height="6" rx="3" fill={MUTED} />
-      <rect x="78" y="238" width="70" height="6" rx="3" fill={MUTED} />
+      {/* msg 2 — Marco */}
+      <text x="296" y="180" fontSize="10" fontWeight="600" fill={MUTED} textAnchor="end">Marco</text>
+      <rect x="110" y="184" width="186" height="34" rx="14" fill={BLUE} />
+      <text x="284" y="205" fontSize="12" fill="white" textAnchor="end">sì. zero server, su tor</text>
 
-      {/* sent */}
-      <rect x="186" y="266" width="110" height="34" rx="14" fill={BLUE} />
-      <rect x="200" y="277" width="70" height="6" rx="3" fill="white" opacity="0.9" />
-      <rect x="200" y="288" width="48" height="6" rx="3" fill="white" opacity="0.7" />
+      {/* msg 3 — Giulia */}
+      <text x="66" y="240" fontSize="10" fontWeight="600" fill={MUTED}>Giulia</text>
+      <rect x="64" y="244" width="186" height="34" rx="14" fill={BLUE_SOFT} />
+      <text x="76" y="265" fontSize="12" fill={FG}>e chi può leggere i msg?</text>
+
+      {/* msg 4 — Marco */}
+      <text x="296" y="300" fontSize="10" fontWeight="600" fill={MUTED} textAnchor="end">Marco</text>
+      <rect x="138" y="304" width="158" height="34" rx="14" fill={BLUE} />
+      <text x="284" y="325" fontSize="12" fill="white" textAnchor="end">nessuno. e2e cifrati</text>
 
       {/* input bar */}
       <rect x="56" y="370" width="248" height="44" rx="14" fill={BLUE_SOFT} />
