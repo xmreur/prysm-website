@@ -12,6 +12,7 @@ const NAV_LINKS = [
   { href: '#funzionalita', label: 'Funzionalità' },
   { href: '#come-funziona', label: 'Come funziona' },
   { href: '#tecnologia', label: 'Tecnologia' },
+  { href: '#confronto', label: 'Confronto' },
   { href: '#scarica', label: 'Scarica' },
 ]
 
