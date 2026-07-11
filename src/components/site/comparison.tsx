@@ -129,26 +129,6 @@ function RatingIcon({ rating }: { rating: Rating }) {
   )
 }
 
-/* ------------------------------- legend ------------------------------- */
-
-function Legend() {
-  const items: { rating: Rating; text: string }[] = [
-    { rating: 'good', text: 'Yes / complete' },
-    { rating: 'partial', text: 'Partial' },
-    { rating: 'bad', text: 'No / absent' },
-  ]
-  return (
-    <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs text-muted-foreground">
-      {items.map((it) => (
-        <span key={it.text} className="inline-flex items-center gap-2">
-          <RatingIcon rating={it.rating} />
-          {it.text}
-        </span>
-      ))}
-    </div>
-  )
-}
-
 /* ------------------------------ the table ----------------------------- */
 
 export function Comparison() {
@@ -258,11 +238,6 @@ export function Comparison() {
                 ))}
               </tbody>
             </table>
-          </div>
-
-          {/* legend */}
-          <div className="mt-8">
-            <Legend />
           </div>
         </Reveal>
       </Container>
