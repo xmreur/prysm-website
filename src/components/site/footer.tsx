@@ -19,9 +19,10 @@ const COLUMNS = [
     title: 'Risorse',
     links: [
       { label: 'Contribuire', href: 'https://github.com/xmreur/prysm/blob/main/CONTRIBUTING.md' },
-      { label: 'Funzionalità', href: '#funzionalita' },
-      { label: 'Come funziona', href: '#come-funziona' },
-      { label: 'Tecnologia', href: '#tecnologia' },
+      { label: 'Funzionalità', href: '/#funzionalita' },
+      { label: 'Come funziona', href: '/#come-funziona' },
+      { label: 'Tecnologia', href: '/#tecnologia' },
+      { label: 'Team', href: '/team' },
     ],
   },
 ]
@@ -33,7 +34,7 @@ export function Footer() {
         <div className="grid gap-10 md:grid-cols-12">
           {/* Brand */}
           <div className="md:col-span-6">
-            <Link href="#top" className="flex items-center gap-2.5">
+            <Link href="/" className="flex items-center gap-2.5">
               <PrysmMark className="h-8 w-8" />
               <span className="text-[1.15rem] font-semibold tracking-tight">
                 Prysm

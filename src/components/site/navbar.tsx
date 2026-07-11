@@ -9,11 +9,12 @@ import { Container } from './ui'
 import { cn } from '@/lib/utils'
 
 const NAV_LINKS = [
-  { href: '#funzionalita', label: 'Funzionalità' },
-  { href: '#come-funziona', label: 'Come funziona' },
-  { href: '#tecnologia', label: 'Tecnologia' },
-  { href: '#confronto', label: 'Confronto' },
-  { href: '#scarica', label: 'Scarica' },
+  { href: '/#funzionalita', label: 'Funzionalità' },
+  { href: '/#come-funziona', label: 'Come funziona' },
+  { href: '/#tecnologia', label: 'Tecnologia' },
+  { href: '/#confronto', label: 'Confronto' },
+  { href: '/team', label: 'Team' },
+  { href: '/#scarica', label: 'Scarica' },
 ]
 
 export function Navbar() {
@@ -42,7 +43,7 @@ export function Navbar() {
     >
       <Container className="flex h-16 items-center justify-between md:h-18">
         {/* Brand */}
-        <Link href="#top" className="flex items-center gap-2.5">
+        <Link href="/" className="flex items-center gap-2.5">
           <PrysmMark className="h-8 w-8" />
           <span className="text-[1.15rem] font-semibold tracking-tight">Prysm</span>
         </Link>
@@ -86,7 +87,7 @@ export function Navbar() {
           </a>
 
           <a
-            href="#scarica"
+            href="/#scarica"
             className="ml-1 hidden items-center rounded-full bg-primary px-5 py-2 text-sm font-semibold text-primary-foreground transition-transform hover:scale-[1.03] active:scale-95 sm:inline-flex"
           >
             Scarica Prysm
@@ -119,7 +120,7 @@ export function Navbar() {
               </a>
             ))}
             <a
-              href="#scarica"
+              href="/#scarica"
               onClick={() => setOpen(false)}
               className="mt-2 inline-flex items-center justify-center rounded-full bg-primary px-5 py-3 text-base font-semibold text-primary-foreground"
             >
