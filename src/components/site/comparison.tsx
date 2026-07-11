@@ -27,14 +27,14 @@ const ROWS: Row[] = [
     cells: [
       { rating: 'good', label: '100%' },
       { rating: 'bad', label: 'No' },
-      { rating: 'partial', label: 'Parziale' },
-      { rating: 'good', label: 'Sì' },
+      { rating: 'partial', label: 'Partial' },
+      { rating: 'good', label: 'Yes' },
     ],
   },
   {
-    criterion: 'Decentralizzato (P2P)',
+    criterion: 'Decentralized (P2P)',
     cells: [
-      { rating: 'good', label: 'Sì' },
+      { rating: 'good', label: 'Yes' },
       { rating: 'bad', label: 'No' },
       { rating: 'bad', label: 'No' },
       { rating: 'bad', label: 'No' },
@@ -43,64 +43,64 @@ const ROWS: Row[] = [
   {
     criterion: 'Onion Routing (Tor)',
     cells: [
-      { rating: 'good', label: 'Sì' },
+      { rating: 'good', label: 'Yes' },
       { rating: 'bad', label: 'No' },
       { rating: 'bad', label: 'No' },
       { rating: 'bad', label: 'No' },
     ],
   },
   {
-    criterion: 'Crittografia E2E',
+    criterion: 'E2E Encryption',
     cells: [
-      { rating: 'good', label: 'Sempre' },
+      { rating: 'good', label: 'Always' },
       { rating: 'good', label: 'Default' },
-      { rating: 'partial', label: 'Opzionale' },
-      { rating: 'good', label: 'Sempre' },
+      { rating: 'partial', label: 'Optional' },
+      { rating: 'good', label: 'Always' },
     ],
   },
   {
-    criterion: 'Numero di telefono richiesto',
+    criterion: 'Phone number required',
     cells: [
       { rating: 'good', label: 'No' },
-      { rating: 'bad', label: 'Sì' },
-      { rating: 'bad', label: 'Sì' },
-      { rating: 'bad', label: 'Sì' },
+      { rating: 'bad', label: 'Yes' },
+      { rating: 'bad', label: 'Yes' },
+      { rating: 'bad', label: 'Yes' },
     ],
   },
   {
-    criterion: 'Protezione dei metadati',
+    criterion: 'Metadata protection',
     cells: [
       { rating: 'good', label: 'Tor' },
       { rating: 'bad', label: 'No' },
       { rating: 'bad', label: 'No' },
-      { rating: 'partial', label: 'Parziale' },
+      { rating: 'partial', label: 'Partial' },
     ],
   },
   {
-    criterion: 'Server centrali',
+    criterion: 'Central servers',
     cells: [
-      { rating: 'good', label: 'Nessuno' },
+      { rating: 'good', label: 'None' },
       { rating: 'bad', label: 'Meta' },
       { rating: 'bad', label: 'Telegram' },
       { rating: 'bad', label: 'Signal Fdn.' },
     ],
   },
   {
-    criterion: 'Raccolta dati',
+    criterion: 'Data collection',
     cells: [
       { rating: 'good', label: 'Zero' },
-      { rating: 'bad', label: 'Estesa' },
-      { rating: 'partial', label: 'Limitata' },
-      { rating: 'good', label: 'Minima' },
+      { rating: 'bad', label: 'Extensive' },
+      { rating: 'partial', label: 'Limited' },
+      { rating: 'good', label: 'Minimal' },
     ],
   },
   {
-    criterion: 'Immunità dalla censura',
+    criterion: 'Censorship immunity',
     cells: [
-      { rating: 'good', label: 'Sì' },
+      { rating: 'good', label: 'Yes' },
       { rating: 'bad', label: 'No' },
-      { rating: 'partial', label: 'Parziale' },
-      { rating: 'partial', label: 'Parziale' },
+      { rating: 'partial', label: 'Partial' },
+      { rating: 'partial', label: 'Partial' },
     ],
   },
 ]
@@ -133,9 +133,9 @@ function RatingIcon({ rating }: { rating: Rating }) {
 
 function Legend() {
   const items: { rating: Rating; text: string }[] = [
-    { rating: 'good', text: 'Sì / completo' },
-    { rating: 'partial', text: 'Parziale' },
-    { rating: 'bad', text: 'No / assente' },
+    { rating: 'good', text: 'Yes / complete' },
+    { rating: 'partial', text: 'Partial' },
+    { rating: 'bad', text: 'No / absent' },
   ]
   return (
     <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs text-muted-foreground">
@@ -154,18 +154,18 @@ function Legend() {
 export function Comparison() {
   return (
     <section
-      id="confronto"
+      id="comparison"
       className="border-t border-border bg-background py-20 md:py-28"
     >
       <Container>
         <Reveal className="mx-auto max-w-2xl text-center">
-          <Eyebrow>Confronto</Eyebrow>
+          <Eyebrow>Comparison</Eyebrow>
           <h2 className="mt-3 text-balance text-3xl font-semibold tracking-tight md:text-5xl">
-            Come si confronta Prysm
+            How Prysm compares
           </h2>
           <p className="mt-4 text-pretty text-lg leading-relaxed text-muted-foreground">
-            I messenger tradizionali compromettono la tua privacy.
-            L&apos;architettura di Prysm ti rimette al controllo.
+            Traditional messengers compromise your privacy. Prysm&apos;s
+            architecture puts you back in control.
           </p>
         </Reveal>
 
@@ -179,7 +179,7 @@ export function Comparison() {
                     scope="col"
                     className="sticky left-0 z-10 bg-background/95 px-4 py-4 text-left text-xs font-semibold uppercase tracking-wider text-muted-foreground backdrop-blur sm:px-5"
                   >
-                    Modello di sicurezza
+                    Security model
                   </th>
                   {APPS.map((app, i) => (
                     <th

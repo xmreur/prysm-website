@@ -17,17 +17,17 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Prysm — Messaggistica cifrata su Tor",
+  title: "Prysm — Encrypted Messaging on Tor",
   description:
-    "Comunicazione decentralizzata e onion-routed senza sorveglianza né server centralizzati. Prysm usa Tor per messaggistica P2P sicura e resistente ai metadati.",
+    "Decentralized, onion-routed communication without surveillance or centralized servers. Prysm uses Tor for secure, metadata-resistant P2P messaging.",
   keywords: [
     "privacy",
     "P2P",
     "tor",
     "onion routing",
-    "crittografia",
-    "decentralizzato",
-    "comunicazione sicura",
+    "encryption",
+    "decentralized",
+    "secure communication",
     "messenger",
   ],
   authors: [{ name: "xmreur" }],
@@ -35,18 +35,18 @@ export const metadata: Metadata = {
     icon: "/favicon.ico",
   },
   openGraph: {
-    title: "Prysm — Messaggistica cifrata su Tor",
+    title: "Prysm — Encrypted Messaging on Tor",
     description:
-      "Comunicazione peer-to-peer su Tor. Nessun server, nessuna sorveglianza, nessun metadato.",
+      "Peer-to-peer communication over Tor. No servers, no surveillance, no metadata.",
     url: "https://prysmchat.xyz/",
     siteName: "Prysm",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Prysm — Messaggistica cifrata su Tor",
+    title: "Prysm — Encrypted Messaging on Tor",
     description:
-      "Comunicazione peer-to-peer su Tor. Nessun server, nessuna sorveglianza, nessun metadato.",
+      "Peer-to-peer communication over Tor. No servers, no surveillance, no metadata.",
   },
 };
 
@@ -56,7 +56,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="it" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning>
       <body
         className={`${inter.variable} ${geistMono.variable} antialiased bg-background text-foreground`}
       >

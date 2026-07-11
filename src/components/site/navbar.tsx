@@ -9,12 +9,12 @@ import { Container } from './ui'
 import { cn } from '@/lib/utils'
 
 const NAV_LINKS = [
-  { href: '/#funzionalita', label: 'Funzionalità' },
-  { href: '/#come-funziona', label: 'Come funziona' },
-  { href: '/#tecnologia', label: 'Tecnologia' },
-  { href: '/#confronto', label: 'Confronto' },
+  { href: '/#features', label: 'Features' },
+  { href: '/#how-it-works', label: 'How it works' },
+  { href: '/#technology', label: 'Technology' },
+  { href: '/#comparison', label: 'Comparison' },
   { href: '/team', label: 'Team' },
-  { href: '/#scarica', label: 'Scarica' },
+  { href: '/#download', label: 'Download' },
 ]
 
 export function Navbar() {
@@ -65,7 +65,7 @@ export function Navbar() {
         <div className="flex items-center gap-1.5">
           <button
             type="button"
-            aria-label="Cambia tema"
+            aria-label="Toggle theme"
             onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}
             className="inline-flex h-9 w-9 items-center justify-center rounded-full text-muted-foreground transition-colors hover:bg-accent hover:text-foreground"
           >
@@ -87,16 +87,16 @@ export function Navbar() {
           </a>
 
           <a
-            href="/#scarica"
+            href="/#download"
             className="ml-1 hidden items-center rounded-full bg-primary px-5 py-2 text-sm font-semibold text-primary-foreground transition-transform hover:scale-[1.03] active:scale-95 sm:inline-flex"
           >
-            Scarica Prysm
+            Download Prysm
           </a>
 
           {/* Mobile toggle */}
           <button
             type="button"
-            aria-label="Apri menu"
+            aria-label="Open menu"
             onClick={() => setOpen((v) => !v)}
             className="inline-flex h-9 w-9 items-center justify-center rounded-full text-foreground transition-colors hover:bg-accent md:hidden"
           >
@@ -120,11 +120,11 @@ export function Navbar() {
               </a>
             ))}
             <a
-              href="/#scarica"
+              href="/#download"
               onClick={() => setOpen(false)}
               className="mt-2 inline-flex items-center justify-center rounded-full bg-primary px-5 py-3 text-base font-semibold text-primary-foreground"
             >
-              Scarica Prysm
+              Download Prysm
             </a>
             <a
               href="https://github.com/xmreur/prysm"

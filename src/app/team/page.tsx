@@ -7,16 +7,16 @@ import { Container, Eyebrow } from '@/components/site/ui'
 export const metadata: Metadata = {
   title: 'Team — Prysm',
   description:
-    'Le persone dietro Prysm: sviluppatori e tester che costruiscono un messenger peer-to-peer su Tor, open source e decentralizzato.',
+    'The people behind Prysm: developers and testers building a peer-to-peer messenger over Tor, open source and decentralized.',
 }
 
 /* ------------------------------------------------------------------ *
  *  TEAM DATA
- *  Sostituisci i placeholder con gli username reali del team.
- *  Per ogni membro puoi impostare:
- *    - username: handle (senza @)
- *    - role:     ruolo mostrato sotto il nome
- *    - github:   URL profilo GitHub (opzionale — se assente, niente link)
+ *  Replace the placeholders with the real team usernames.
+ *  For each member you can set:
+ *    - username: handle (without @)
+ *    - role:     role shown under the name
+ *    - github:   GitHub profile URL (optional — if absent, no link)
  * ------------------------------------------------------------------ */
 
 type Member = {
@@ -31,13 +31,13 @@ const DEVS: Member[] = [
     role: 'Maintainer',
     github: 'https://github.com/xmreur',
   },
-  // TODO: sostituisci i placeholder con gli username reali
-  { username: 'dev-1', role: 'Sviluppatore' },
-  { username: 'dev-2', role: 'Sviluppatore' },
+  // TODO: replace the placeholders with the real usernames
+  { username: 'dev-1', role: 'Developer' },
+  { username: 'dev-2', role: 'Developer' },
 ]
 
 const TESTERS: Member[] = [
-  // TODO: sostituisci i placeholder con gli username reali
+  // TODO: replace the placeholders with the real usernames
   { username: 'tester-1', role: 'Tester' },
   { username: 'tester-2', role: 'Tester' },
 ]
@@ -120,12 +120,11 @@ export default function TeamPage() {
             <div className="mx-auto max-w-2xl text-center">
               <Eyebrow>Team</Eyebrow>
               <h1 className="mt-3 text-balance text-4xl font-semibold tracking-tight md:text-6xl">
-                Le persone dietro Prysm
+                The people behind Prysm
               </h1>
               <p className="mt-5 text-pretty text-lg leading-relaxed text-muted-foreground">
-                Un progetto open source e indipendente. Nessuna azienda, nessun
-                investitore: solo persone che credono che la privacy sia un
-                diritto, non un&apos;opzione.
+                An open source, independent project. No company, no investors:
+                just people who believe privacy is a right, not an option.
               </p>
             </div>
           </Container>
@@ -136,8 +135,8 @@ export default function TeamPage() {
           <Container>
             {/* Developers */}
             <GroupHeading
-              title="Sviluppatori"
-              desc="Chi scrive il codice di Prysm: crittografia, networking su Tor e interfaccia."
+              title="Developers"
+              desc="The people writing Prysm's code: cryptography, Tor networking, and the interface."
             />
             <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
               {DEVS.map((m) => (
@@ -148,8 +147,8 @@ export default function TeamPage() {
             {/* Testers */}
             <div className="mt-20">
               <GroupHeading
-                title="Tester"
-                desc="Chi trova i bug prima che li trovi qualcun altro. Ogni segnalazione rende Prysm più solido."
+                title="Testers"
+                desc="The people who find bugs before anyone else does. Every report makes Prysm stronger."
               />
               <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
                 {TESTERS.map((m) => (
@@ -161,11 +160,11 @@ export default function TeamPage() {
             {/* Contribute CTA */}
             <div className="mt-20 flex flex-col items-center gap-4 rounded-3xl border border-border bg-muted/30 p-8 text-center md:p-12">
               <h3 className="text-2xl font-semibold tracking-tight">
-                Vuoi unirti al team?
+                Want to join the team?
               </h3>
               <p className="max-w-md text-pretty text-base leading-relaxed text-muted-foreground">
-                Prysm è open source: chiunque può contribuire con codice, test,
-                traduzioni o segnalazioni. Trova il tuo posto nel progetto.
+                Prysm is open source: anyone can contribute code, testing,
+                translations, or reports. Find your place in the project.
               </p>
               <a
                 href="https://github.com/xmreur/prysm"
@@ -173,7 +172,7 @@ export default function TeamPage() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition-transform hover:scale-[1.03]"
               >
-                Contribuisci su GitHub
+                Contribute on GitHub
                 <ArrowUpRight className="h-4 w-4" />
               </a>
             </div>

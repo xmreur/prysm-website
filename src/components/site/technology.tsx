@@ -7,44 +7,44 @@ const STACK = [
   {
     icon: <Smartphone className="h-5 w-5" />,
     title: 'Flutter',
-    desc: 'Interfaccia multipiattaforma per Windows, macOS e Linux.',
+    desc: 'Cross-platform UI for Windows, macOS, and Linux.',
   },
   {
     icon: <Server className="h-5 w-5" />,
-    title: 'Protocollo Tor',
-    desc: 'Trasporto anonimo e routing a cipolla per ogni connessione.',
+    title: 'Tor Protocol',
+    desc: 'Anonymous transport and onion routing for every connection.',
   },
   {
     icon: <KeyRound className="h-5 w-5" />,
-    title: 'Chiavi crittografiche',
-    desc: 'Identità P2P basate su .onion e crittografia end-to-end moderna.',
+    title: 'Cryptographic keys',
+    desc: '.onion-based P2P identities and modern end-to-end encryption.',
   },
   {
     icon: <Code2 className="h-5 w-5" />,
-    title: 'Codice nativo',
-    desc: 'Integrazione Swift e Kotlin per il mobile (in arrivo).',
+    title: 'Native code',
+    desc: 'Swift and Kotlin integration for mobile (coming soon).',
   },
 ]
 
 const ROADMAP = [
-  'Mobile TOR embedding',
-  'Messaggistica di gruppo',
-  'Supporto foto e video',
-  'Invio di file',
+  'Mobile Tor embedding',
+  'Group messaging',
+  'Photo & video support',
+  'File sharing',
 ]
 
 export function Technology() {
   return (
-    <section id="tecnologia" className="border-t border-border bg-background py-20 md:py-28">
+    <section id="technology" className="border-t border-border bg-background py-20 md:py-28">
       <Container>
         <Reveal className="mx-auto max-w-2xl text-center">
-          <Eyebrow>Tecnologia</Eyebrow>
+          <Eyebrow>Technology</Eyebrow>
           <h2 className="mt-3 text-balance text-3xl font-semibold tracking-tight md:text-5xl">
-            Costruito con tecnologie moderne
+            Built with modern technology
           </h2>
           <p className="mt-4 text-pretty text-lg leading-relaxed text-muted-foreground">
-            Crittografia all&apos;avanguardia e protocolli collaudati lavorano
-            insieme per la tua privacy.
+            State-of-the-art cryptography and battle-tested protocols working
+            together for your privacy.
           </p>
         </Reveal>
 
@@ -74,7 +74,7 @@ export function Technology() {
             <div className="flex items-center gap-2">
               <ArrowRight className="h-4 w-4 text-primary" />
               <h3 className="text-base font-semibold tracking-tight">
-                Sulla roadmap
+                On the roadmap
               </h3>
             </div>
             <div className="mt-5 grid gap-x-8 gap-y-3 sm:grid-cols-2">

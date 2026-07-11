@@ -13,33 +13,33 @@ import { Container, Reveal, Eyebrow } from './ui'
 const COMMUNITY = [
   {
     icon: <MessageCircle className="h-4 w-4" />,
-    label: 'Segnala problemi',
+    label: 'Report issues',
     href: 'https://github.com/xmreur/prysm/issues',
   },
   {
     icon: <MessageCircle className="h-4 w-4" />,
-    label: 'Discussioni',
+    label: 'Discussions',
     href: 'https://github.com/xmreur/prysm/discussions',
   },
   {
     icon: <FileText className="h-4 w-4" />,
-    label: 'Contribuire',
+    label: 'Contributing',
     href: 'https://github.com/xmreur/prysm/blob/main/CONTRIBUTING.md',
   },
 ]
 
 export function Download_() {
   return (
-    <section id="scarica" className="border-t border-border bg-muted/30 py-20 md:py-28">
+    <section id="download" className="border-t border-border bg-muted/30 py-20 md:py-28">
       <Container>
         <Reveal className="mx-auto max-w-2xl text-center">
-          <Eyebrow>Scarica</Eyebrow>
+          <Eyebrow>Download</Eyebrow>
           <h2 className="mt-3 text-balance text-3xl font-semibold tracking-tight md:text-5xl">
-            Inizia con Prysm
+            Get started with Prysm
           </h2>
           <p className="mt-4 text-pretty text-lg leading-relaxed text-muted-foreground">
-            Scarica l&apos;ultima versione o contribuisci al progetto. Tutto è
-            open source, sempre.
+            Download the latest release or contribute to the project. Everything
+            is open source, always.
           </p>
         </Reveal>
 
@@ -56,15 +56,14 @@ export function Download_() {
                 <Download className="h-6 w-6" />
               </span>
               <h3 className="mt-5 text-xl font-semibold tracking-tight">
-                Scarica
+                Download
               </h3>
               <p className="mt-2 flex-1 text-sm leading-relaxed text-muted-foreground">
-                Ottieni l&apos;ultima versione per la tua piattaforma da GitHub
-                Releases.
+                Get the latest release for your platform from GitHub Releases.
               </p>
               <span className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition-transform group-hover:scale-[1.02]">
                 <Download className="h-4 w-4" />
-                Ultima release
+                Latest release
               </span>
             </a>
 
@@ -82,12 +81,12 @@ export function Download_() {
                 Open source
               </h3>
               <p className="mt-2 flex-1 text-sm leading-relaxed text-muted-foreground">
-                Esplora il codice, proponi miglioramenti e contribuisci allo
-                sviluppo.
+                Explore the code, propose improvements, and contribute to
+                development.
               </p>
               <span className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full border border-border bg-background px-6 py-3 text-sm font-semibold text-foreground transition-colors group-hover:bg-accent">
                 <Github className="h-4 w-4" />
-                Vedi su GitHub
+                View on GitHub
               </span>
             </a>
           </div>
@@ -98,11 +97,11 @@ export function Download_() {
           <div className="mx-auto mt-6 flex max-w-3xl items-start gap-4 rounded-2xl border border-border bg-background p-6">
             <AlertCircle className="mt-0.5 h-5 w-5 flex-shrink-0 text-primary" />
             <div>
-              <h4 className="text-sm font-semibold">Sviluppo attivo</h4>
+              <h4 className="text-sm font-semibold">Active development</h4>
               <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
-                Prysm è in sviluppo attivo. Le API potrebbero evolversi mentre
-                raffiniamo l&apos;architettura. Resta aggiornato con le release e
-                unisciti alla community.
+                Prysm is under active development. APIs may evolve as we refine
+                the architecture. Stay up to date with releases and join the
+                community.
               </p>
             </div>
           </div>
@@ -112,7 +111,7 @@ export function Download_() {
         <Reveal delay={200}>
           <div className="mx-auto mt-12 max-w-3xl text-center">
             <h3 className="text-xl font-semibold tracking-tight">
-              Unisciti alla community
+              Join the community
             </h3>
             <div className="mt-5 flex flex-wrap items-center justify-center gap-3">
               {COMMUNITY.map((c) => (
@@ -138,17 +137,17 @@ export function Download_() {
               <Heart className="h-5 w-5" />
             </span>
             <h3 className="text-xl font-semibold tracking-tight">
-              Supporta il progetto
+              Support the project
             </h3>
             <p className="max-w-md text-sm leading-relaxed text-muted-foreground">
-              Prysm è gratuito e open source. Se vuoi sostenere il nostro lavoro,
-              le donazioni sono molto apprezzate.
+              Prysm is free and open source. If you&apos;d like to support our
+              work, donations are greatly appreciated.
             </p>
             <a
-              href="#supporto"
+              href="/#support"
               className="inline-flex items-center justify-center rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition-transform hover:scale-[1.03]"
             >
-              Sostieni Prysm
+              Support Prysm
             </a>
           </div>
         </Reveal>

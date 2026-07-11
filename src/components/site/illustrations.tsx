@@ -48,33 +48,33 @@ export function ChatMockup({ className }: { className?: string }) {
       {/* header — peer name + encrypted lock badge */}
       <rect x="56" y="52" width="248" height="44" rx="12" fill={BLUE_SOFT} />
       <circle cx="80" cy="74" r="11" fill={BLUE} />
-      <text x="100" y="72" fontSize="13" fontWeight="600" fill={FG}>Giulia</text>
+      <text x="100" y="72" fontSize="13" fontWeight="600" fill={FG}>Alice</text>
       <text x="100" y="86" fontSize="10" fill={MUTED}>online</text>
       <circle cx="280" cy="74" r="12" fill={BLUE} fillOpacity="0.15" />
       <rect x="275" y="72" width="10" height="8" rx="1.6" fill={BLUE} />
       <path d="M277.5 72 v-1.6 a2.5 2.5 0 0 1 5 0 V72" stroke={BLUE} strokeWidth="1.3" fill="none" />
 
-      {/* conversation — Giulia (received) & Marco (sent) */}
+      {/* conversation — Alice (received) & Bob (sent) */}
 
-      {/* msg 1 — Giulia */}
-      <text x="66" y="126" fontSize="10" fontWeight="600" fill={MUTED}>Giulia</text>
+      {/* msg 1 — Alice */}
+      <text x="66" y="126" fontSize="10" fontWeight="600" fill={MUTED}>Alice</text>
       <rect x="64" y="130" width="150" height="34" rx="14" fill={BLUE_SOFT} />
-      <text x="76" y="151" fontSize="12" fill={FG}>hai provato prysm?</text>
+      <text x="76" y="151" fontSize="12" fill={FG}>tried prysm yet?</text>
 
-      {/* msg 2 — Marco */}
-      <text x="296" y="180" fontSize="10" fontWeight="600" fill={MUTED} textAnchor="end">Marco</text>
+      {/* msg 2 — Bob */}
+      <text x="296" y="180" fontSize="10" fontWeight="600" fill={MUTED} textAnchor="end">Bob</text>
       <rect x="110" y="184" width="186" height="34" rx="14" fill={BLUE} />
-      <text x="284" y="205" fontSize="12" fill="white" textAnchor="end">sì. zero server, su tor</text>
+      <text x="284" y="205" fontSize="12" fill="white" textAnchor="end">yeah. zero servers, on tor</text>
 
-      {/* msg 3 — Giulia */}
-      <text x="66" y="240" fontSize="10" fontWeight="600" fill={MUTED}>Giulia</text>
+      {/* msg 3 — Alice */}
+      <text x="66" y="240" fontSize="10" fontWeight="600" fill={MUTED}>Alice</text>
       <rect x="64" y="244" width="186" height="34" rx="14" fill={BLUE_SOFT} />
-      <text x="76" y="265" fontSize="12" fill={FG}>e chi può leggere i msg?</text>
+      <text x="76" y="265" fontSize="12" fill={FG}>who can read the msgs?</text>
 
-      {/* msg 4 — Marco */}
-      <text x="296" y="300" fontSize="10" fontWeight="600" fill={MUTED} textAnchor="end">Marco</text>
+      {/* msg 4 — Bob */}
+      <text x="296" y="300" fontSize="10" fontWeight="600" fill={MUTED} textAnchor="end">Bob</text>
       <rect x="138" y="304" width="158" height="34" rx="14" fill={BLUE} />
-      <text x="284" y="325" fontSize="12" fill="white" textAnchor="end">nessuno. e2e cifrati</text>
+      <text x="284" y="325" fontSize="12" fill="white" textAnchor="end">nobody. e2e encrypted</text>
 
       {/* input bar */}
       <rect x="56" y="370" width="248" height="44" rx="14" fill={BLUE_SOFT} />

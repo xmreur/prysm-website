@@ -28,10 +28,10 @@ function CoinRow({ coin }: { coin: Coin }) {
     try {
       await navigator.clipboard.writeText(coin.address)
       setCopied(true)
-      toast({ title: `${coin.ticker} copiato`, description: 'Indirizzo copiato negli appunti.' })
+      toast({ title: `${coin.ticker} copied`, description: 'Address copied to clipboard.' })
       setTimeout(() => setCopied(false), 1600)
     } catch {
-      toast({ title: 'Copia non riuscita', description: 'Copia l\'indirizzo manualmente.' })
+      toast({ title: 'Copy failed', description: 'Copy the address manually.' })
     }
   }, [coin])
 
@@ -54,7 +54,7 @@ function CoinRow({ coin }: { coin: Coin }) {
       <button
         type="button"
         onClick={copy}
-        aria-label={`Copia indirizzo ${coin.ticker}`}
+        aria-label={`Copy ${coin.ticker} address`}
         className="inline-flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full text-muted-foreground transition-colors hover:bg-accent hover:text-foreground"
       >
         {copied ? <Check className="h-4 w-4 text-primary" /> : <Copy className="h-4 w-4" />}
@@ -65,17 +65,17 @@ function CoinRow({ coin }: { coin: Coin }) {
 
 export function Support() {
   return (
-    <section id="supporto" className="border-t border-border bg-background py-20 md:py-28">
+    <section id="support" className="border-t border-border bg-background py-20 md:py-28">
       <Container>
         <Reveal className="mx-auto max-w-2xl text-center">
-          <Eyebrow>Supporta</Eyebrow>
+          <Eyebrow>Support</Eyebrow>
           <h2 className="mt-3 text-balance text-3xl font-semibold tracking-tight md:text-5xl">
-            Sostieni Prysm
+            Support Prysm
           </h2>
           <p className="mt-4 text-pretty text-lg leading-relaxed text-muted-foreground">
-            La nostra app è gratuita, ma se vuoi supportare il nostro lavoro le
-            donazioni sono molto apprezzate. Ogni contributo ci aiuta a
-            migliorare Prysm.
+            Our app is free, but if you&apos;d like to support our work,
+            donations are greatly appreciated. Every contribution helps us keep
+            improving Prysm.
           </p>
         </Reveal>
 
@@ -84,7 +84,7 @@ export function Support() {
             <div className="mb-4 flex items-center gap-2 px-2 pt-1">
               <Heart className="h-4 w-4 text-primary" />
               <h3 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">
-                Indirizzi per le donazioni
+                Donation addresses
               </h3>
             </div>
             <div className="prysm-scroll grid max-h-[28rem] gap-3 overflow-y-auto p-1 sm:grid-cols-2">
@@ -97,14 +97,14 @@ export function Support() {
 
         <Reveal delay={160}>
           <p className="mx-auto mt-6 flex max-w-3xl items-center justify-center gap-1.5 text-center text-sm text-muted-foreground">
-            Prysm è indipendente e no-profit.
+            Prysm is independent and non-profit.
             <a
               href="https://github.com/xmreur/prysm"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-0.5 font-medium text-primary hover:underline"
             >
-              Vedi il progetto <ArrowUpRight className="h-3.5 w-3.5" />
+              View the project <ArrowUpRight className="h-3.5 w-3.5" />
             </a>
           </p>
         </Reveal>

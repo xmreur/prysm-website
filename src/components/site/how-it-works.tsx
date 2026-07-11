@@ -29,22 +29,22 @@ function TorGlyph() {
 const STEPS = [
   {
     glyph: <DeviceGlyph />,
-    name: 'Il tuo dispositivo',
-    sub: 'Cifri il messaggio',
+    name: 'Your device',
+    sub: 'Encrypt the message',
   },
   {
     glyph: <TorGlyph />,
-    name: 'Rete Tor',
-    sub: 'Routing a cipolla',
+    name: 'Tor network',
+    sub: 'Onion routing',
   },
   {
     glyph: <DeviceGlyph />,
-    name: 'Dispositivo del peer',
-    sub: 'Decifra il messaggio',
+    name: 'Peer device',
+    sub: 'Decrypt the message',
   },
 ]
 
-const TAGS = ['Anonimo', 'Cifrato', 'Diretto']
+const TAGS = ['Anonymous', 'Encrypted', 'Direct']
 
 function StepColumn({
   step,
@@ -71,19 +71,18 @@ function StepColumn({
 export function HowItWorks() {
   return (
     <section
-      id="come-funziona"
+      id="how-it-works"
       className="border-t border-border bg-muted/30 py-20 md:py-28"
     >
       <Container>
         <Reveal className="mx-auto max-w-2xl text-center">
-          <Eyebrow>Come funziona</Eyebrow>
+          <Eyebrow>How it works</Eyebrow>
           <h2 className="mt-3 text-balance text-3xl font-semibold tracking-tight md:text-5xl">
-            End-to-end incontra il routing a cipolla
+            End-to-end meets onion routing
           </h2>
           <p className="mt-4 text-pretty text-lg leading-relaxed text-muted-foreground">
-            I messaggi viaggiano direttamente tra i peer, senza intermediari.
-            La crittografia avviene sul tuo dispositivo, il trasporto avviene su
-            Tor.
+            Messages travel directly between peers, with no intermediaries.
+            Encryption happens on your device, transport happens over Tor.
           </p>
         </Reveal>
 

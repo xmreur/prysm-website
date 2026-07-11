@@ -22,37 +22,37 @@ type Feature = {
 const FEATURES: Feature[] = [
   {
     icon: <Lock className="h-5 w-5" />,
-    title: 'Crittografia end-to-end',
-    desc: 'I messaggi vengono cifrati sul tuo dispositivo e decifrati solo quando apri la chat. Nessuno — nemmeno noi — può leggerli.',
-    points: ['Crittografia end-to-end moderna', 'Nessun accesso da parte nostra', 'Verifica delle chiavi'],
+    title: 'End-to-end encryption',
+    desc: 'Messages are encrypted on your device and decrypted only when you open the chat. Nobody — not even us — can read them.',
+    points: ['Modern end-to-end encryption', 'No access on our side', 'Key verification'],
     illustration: <ChatMockup className="w-full max-w-xs" />,
   },
   {
     icon: <Network className="h-5 w-5" />,
-    title: 'Routing a cipolla su Tor',
-    desc: 'Più hop di relay attraverso la rete Tor rendono il tracciamento delle tue comunicazioni matematicamente impossibile.',
-    points: ['Trasporto anonimo', 'Resistente ai metadati', 'Nessun indirizzo IP esposto'],
+    title: 'Onion routing over Tor',
+    desc: 'Multiple relay hops through the Tor network make tracking your communications mathematically impossible.',
+    points: ['Anonymous transport', 'Metadata-resistant', 'No IP address exposed'],
     illustration: <OnionDiagram className="w-full max-w-xs" />,
   },
   {
     icon: <Shield className="h-5 w-5" />,
-    title: 'Architettura peer-to-peer',
-    desc: 'Connessioni dirette tra utenti. Nessun server centrale significa nessun singolo punto di fallimento da attaccare.',
-    points: ['Nessun server da hackerare', 'Nessuna azienda da citare', 'Conversazioni solo tra peer'],
+    title: 'Peer-to-peer architecture',
+    desc: 'Direct connections between users. No central servers means no single point of failure to attack.',
+    points: ['No servers to hack', 'No company to subpoena', 'Conversations only between peers'],
     illustration: <NetworkMesh className="w-full max-w-xs" />,
   },
   {
     icon: <KeyRound className="h-5 w-5" />,
-    title: 'Identità davvero privata',
-    desc: 'Chiavi crittografiche al posto di numeri di telefono o email. La tua identità è solo tua, e nessuno può collegarla a te.',
-    points: ['Identità basate su .onion', 'Nessun numero richiesto', 'Nessuna registrazione'],
+    title: 'Truly private identity',
+    desc: 'Cryptographic keys instead of phone numbers or emails. Your identity is yours alone, and no one can link it to you.',
+    points: ['.onion-based identities', 'No phone number required', 'No registration'],
     illustration: <KeyIdentity className="w-full max-w-xs" />,
   },
   {
     icon: <Globe className="h-5 w-5" />,
-    title: 'Resistente alla censura',
-    desc: 'Architettura distribuita senza un punto centrale di fallimento. Non può essere bloccata, intercettata o spenta.',
-    points: ['Superamento dei firewall', 'Funziona ovunque', 'Sempre disponibile'],
+    title: 'Censorship resistant',
+    desc: 'Distributed architecture with no central point of failure. It cannot be blocked, intercepted, or shut down.',
+    points: ['Bypasses firewalls', 'Works anywhere', 'Always available'],
     illustration: <GlobeShield className="w-full max-w-xs" />,
   },
 ]
@@ -111,16 +111,16 @@ function FeatureRow({ feature, index }: { feature: Feature; index: number }) {
 
 export function Features() {
   return (
-    <section id="funzionalita" className="border-t border-border bg-background py-20 md:py-28">
+    <section id="features" className="border-t border-border bg-background py-20 md:py-28">
       <Container>
         <Reveal className="mx-auto max-w-2xl text-center">
-          <Eyebrow>Perché Prysm</Eyebrow>
+          <Eyebrow>Why Prysm</Eyebrow>
           <h2 className="mt-3 text-balance text-3xl font-semibold tracking-tight md:text-5xl">
-            La privacy non è un&apos;opzione
+            Privacy isn&apos;t an option
           </h2>
           <p className="mt-4 text-pretty text-lg leading-relaxed text-muted-foreground">
-            È il fondamento di ogni funzione. Scopri qui sotto i motivi per cui
-            Prysm è un&apos;app di messaggistica sicura, semplice ed efficace.
+            It&apos;s the foundation of every feature. Discover below why Prysm
+            is a secure, simple, and effective messaging app.
           </p>
         </Reveal>
 

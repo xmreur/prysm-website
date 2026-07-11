@@ -6,8 +6,8 @@ import { ChatMockup } from './illustrations'
 
 const STATS = [
   { value: '100%', label: 'Open Source' },
-  { value: 'Zero', label: 'Raccolta dati' },
-  { value: 'P2P', label: 'Architettura' },
+  { value: 'Zero', label: 'Data Collection' },
+  { value: 'P2P', label: 'Architecture' },
 ]
 
 export function Hero() {
@@ -27,22 +27,22 @@ export function Hero() {
         <Reveal>
           <span className="inline-flex items-center gap-2 rounded-full border border-border bg-background/60 px-4 py-1.5 text-sm font-medium text-muted-foreground">
             <span className="prysm-dot inline-block h-2 w-2 rounded-full bg-primary" />
-            Open source · Decentralizzato
+            Open source · Decentralized
           </span>
         </Reveal>
 
         <Reveal delay={80} as="h1">
           <span className="mt-7 block text-balance text-4xl font-semibold leading-[1.05] tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
-            Messaggistica cifrata
+            Encrypted messaging
             <br className="hidden sm:block" />{' '}
-            di cui puoi fidarti
+            you can trust
           </span>
         </Reveal>
 
         <Reveal delay={160}>
           <p className="mx-auto mt-6 max-w-2xl text-pretty text-lg leading-relaxed text-muted-foreground md:text-xl">
-            Comunicazione peer-to-peer su Tor. Nessun server, nessuna
-            sorveglianza, nessun metadato.
+            Peer-to-peer communication over Tor. No servers, no surveillance,
+            no metadata.
           </p>
         </Reveal>
 
@@ -55,7 +55,7 @@ export function Hero() {
               className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-7 py-3.5 text-base font-semibold text-primary-foreground shadow-sm transition-transform hover:scale-[1.03] active:scale-95"
             >
               <Download className="h-5 w-5" />
-              Scarica Prysm
+              Download Prysm
             </a>
             <a
               href="https://github.com/xmreur/prysm"
@@ -64,7 +64,7 @@ export function Hero() {
               className="inline-flex items-center justify-center gap-2 rounded-full border border-border bg-background px-7 py-3.5 text-base font-semibold text-foreground transition-colors hover:bg-accent"
             >
               <Github className="h-5 w-5" />
-              Codice su GitHub
+              Code on GitHub
             </a>
           </div>
         </Reveal>
@@ -100,7 +100,7 @@ export function Hero() {
         <Reveal delay={200}>
           <p className="mt-10 inline-flex items-center gap-2 text-sm text-muted-foreground">
             <Lock className="h-4 w-4 text-primary" />
-            Crittografia end-to-end · Routing a cipolla su Tor
+            End-to-end encryption · Onion routing over Tor
           </p>
         </Reveal>
       </Container>

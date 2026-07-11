@@ -7,21 +7,21 @@ import { Container } from './ui'
 
 const COLUMNS = [
   {
-    title: 'Progetto',
+    title: 'Project',
     links: [
       { label: 'GitHub', href: 'https://github.com/xmreur/prysm' },
       { label: 'Releases', href: 'https://github.com/xmreur/prysm/releases' },
       { label: 'Issues', href: 'https://github.com/xmreur/prysm/issues' },
-      { label: 'Discussioni', href: 'https://github.com/xmreur/prysm/discussions' },
+      { label: 'Discussions', href: 'https://github.com/xmreur/prysm/discussions' },
     ],
   },
   {
-    title: 'Risorse',
+    title: 'Resources',
     links: [
-      { label: 'Contribuire', href: 'https://github.com/xmreur/prysm/blob/main/CONTRIBUTING.md' },
-      { label: 'Funzionalità', href: '/#funzionalita' },
-      { label: 'Come funziona', href: '/#come-funziona' },
-      { label: 'Tecnologia', href: '/#tecnologia' },
+      { label: 'Contributing', href: 'https://github.com/xmreur/prysm/blob/main/CONTRIBUTING.md' },
+      { label: 'Features', href: '/#features' },
+      { label: 'How it works', href: '/#how-it-works' },
+      { label: 'Technology', href: '/#technology' },
       { label: 'Team', href: '/team' },
     ],
   },
@@ -41,8 +41,8 @@ export function Footer() {
               </span>
             </Link>
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-muted-foreground">
-              Messenger peer-to-peer su Tor. Nessun server, nessuna
-              sorveglianza, nessun compromesso. Open source e decentralizzato.
+              A peer-to-peer messenger over Tor. No servers, no surveillance, no
+              compromise. Open source and decentralized.
             </p>
             <a
               href="https://github.com/xmreur/prysm"
@@ -85,12 +85,12 @@ export function Footer() {
 
         <div className="mt-12 flex flex-col items-start justify-between gap-4 border-t border-border pt-6 text-xs text-muted-foreground sm:flex-row sm:items-center">
           <p>
-            © {new Date().getFullYear()} Prysm. Open source sotto licenza MIT.
-            Costruito per chi difende la privacy.
+            © {new Date().getFullYear()} Prysm. Open source under the MIT
+            license. Built for those who defend privacy.
           </p>
           <p className="flex items-center gap-1.5">
             <span className="prysm-dot inline-block h-1.5 w-1.5 rounded-full bg-primary" />
-            Senza pubblicità · senza tracciamento · senza cookie invasivi
+            No ads · no tracking · no invasive cookies
           </p>
         </div>
       </Container>
