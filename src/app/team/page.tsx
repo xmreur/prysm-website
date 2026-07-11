@@ -19,6 +19,7 @@ type Member = {
   username: string
   role: string
   github?: string
+  avatar?: string
 }
 
 const DEVS: Member[] = [
@@ -32,7 +33,7 @@ const DEVS: Member[] = [
 ]
 
 const TESTERS: Member[] = [
-  { username: 'bunbuny', role: 'Tester' },
+  { username: 'bunbuny', role: 'Tester', avatar: '/team/bunbuny.jpg' },
 ]
 
 /* ------------------------------- helpers ---------------------------- */
@@ -40,6 +41,40 @@ const TESTERS: Member[] = [
 function initials(username: string): string {
   const clean = username.replace(/[^a-zA-Z0-9]/g, '')
   return (clean.slice(0, 2) || '?').toUpperCase()
+}
+
+/* ------------------------------- avatar ----------------------------- */
+
+function Avatar({
+  username,
+  avatar,
+  size = 'md',
+}: {
+  username: string
+  avatar?: string
+  size?: 'md' | 'lg'
+}) {
+  const dims = size === 'lg' ? 'h-24 w-24 text-2xl' : 'h-16 w-16 text-xl'
+  if (avatar) {
+    return (
+      <span
+        className={`relative flex ${dims} flex-shrink-0 items-center justify-center overflow-hidden rounded-full bg-primary shadow-sm`}
+      >
+        <img
+          src={avatar}
+          alt={`@${username}`}
+          className="h-full w-full object-cover"
+        />
+      </span>
+    )
+  }
+  return (
+    <span
+      className={`flex ${dims} items-center justify-center rounded-full bg-primary font-semibold tracking-tight text-primary-foreground`}
+    >
+      {initials(username)}
+    </span>
+  )
 }
 
 /* --------------------------- github link bit ------------------------ */
@@ -75,9 +110,7 @@ function LeadCard({ member }: { member: Member }) {
       />
 
       {/* avatar */}
-      <span className="relative flex h-24 w-24 flex-shrink-0 items-center justify-center rounded-full bg-primary text-2xl font-semibold tracking-tight text-primary-foreground shadow-sm">
-        {initials(member.username)}
-      </span>
+      <Avatar username={member.username} avatar={member.avatar} size="lg" />
 
       {/* text */}
       <div className="relative flex flex-col items-center sm:items-start">
@@ -105,9 +138,7 @@ function MemberCard({ member }: { member: Member }) {
   return (
     <div className="flex flex-col items-center rounded-2xl border border-border bg-card p-6 text-center transition-colors hover:border-primary/30">
       {/* avatar */}
-      <span className="flex h-16 w-16 items-center justify-center rounded-full bg-primary text-xl font-semibold tracking-tight text-primary-foreground">
-        {initials(member.username)}
-      </span>
+      <Avatar username={member.username} avatar={member.avatar} />
 
       {/* username */}
       <span className="mt-4 text-base font-semibold tracking-tight">
