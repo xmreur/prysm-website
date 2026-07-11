@@ -85,7 +85,7 @@ export function Footer() {
 
         <div className="mt-12 flex flex-col items-start justify-between gap-4 border-t border-border pt-6 text-xs text-muted-foreground sm:flex-row sm:items-center">
           <p>
-            © {new Date().getFullYear()} Prysm. Open source under the MIT
+            © {new Date().getFullYear()} Prysm. Open source under the GNU GPL
             license. Built for those who defend privacy.
           </p>
           <p className="flex items-center gap-1.5">
