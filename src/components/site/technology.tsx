@@ -17,7 +17,7 @@ const STACK = [
   {
     icon: <KeyRound className="h-5 w-5" />,
     title: 'Chiavi crittografiche',
-    desc: 'Identità P2P basate su .onion e cifratura RSA a 4096 bit.',
+    desc: 'Identità P2P basate su .onion e crittografia end-to-end moderna.',
   },
   {
     icon: <Code2 className="h-5 w-5" />,

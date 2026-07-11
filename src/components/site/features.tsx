@@ -24,7 +24,7 @@ const FEATURES: Feature[] = [
     icon: <Lock className="h-5 w-5" />,
     title: 'Crittografia end-to-end',
     desc: 'I messaggi vengono cifrati sul tuo dispositivo e decifrati solo quando apri la chat. Nessuno — nemmeno noi — può leggerli.',
-    points: ['Crittografia RSA 4096 bit', 'Nessun accesso da parte nostra', 'Verifica delle chiavi'],
+    points: ['Crittografia end-to-end moderna', 'Nessun accesso da parte nostra', 'Verifica delle chiavi'],
     illustration: <ChatMockup className="w-full max-w-xs" />,
   },
   {
