@@ -27,6 +27,7 @@ const DEVS: Member[] = [
     username: 'xmreur',
     role: 'Lead Developer & Creator',
     github: 'https://github.com/xmreur',
+    avatar: '/team/xmreur.jpeg',
   },
   { username: 'ClayRootKit', role: 'Developer' },
   { username: 'mrbuondi', role: 'Developer' },
