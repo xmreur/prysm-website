@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Github, ArrowUpRight } from 'lucide-react'
+import { Github, ArrowUpRight, Crown } from 'lucide-react'
 import { Navbar } from '@/components/site/navbar'
 import { Footer } from '@/components/site/footer'
 import { Container, Eyebrow } from '@/components/site/ui'
@@ -12,11 +12,7 @@ export const metadata: Metadata = {
 
 /* ------------------------------------------------------------------ *
  *  TEAM DATA
- *  Replace the placeholders with the real team usernames.
- *  For each member you can set:
- *    - username: handle (without @)
- *    - role:     role shown under the name
- *    - github:   GitHub profile URL (optional — if absent, no link)
+ *  The first entry in DEVS is rendered as the featured "lead" card.
  * ------------------------------------------------------------------ */
 
 type Member = {
@@ -28,18 +24,15 @@ type Member = {
 const DEVS: Member[] = [
   {
     username: 'xmreur',
-    role: 'Maintainer',
+    role: 'Lead Developer & Creator',
     github: 'https://github.com/xmreur',
   },
-  // TODO: replace the placeholders with the real usernames
-  { username: 'dev-1', role: 'Developer' },
-  { username: 'dev-2', role: 'Developer' },
+  { username: 'ClayRootKit', role: 'Developer' },
+  { username: 'mrbuondi', role: 'Developer' },
 ]
 
 const TESTERS: Member[] = [
-  // TODO: replace the placeholders with the real usernames
-  { username: 'tester-1', role: 'Tester' },
-  { username: 'tester-2', role: 'Tester' },
+  { username: 'bunbuny', role: 'Tester' },
 ]
 
 /* ------------------------------- helpers ---------------------------- */
@@ -47,6 +40,63 @@ const TESTERS: Member[] = [
 function initials(username: string): string {
   const clean = username.replace(/[^a-zA-Z0-9]/g, '')
   return (clean.slice(0, 2) || '?').toUpperCase()
+}
+
+/* --------------------------- github link bit ------------------------ */
+
+function GithubLink({ href }: { href?: string }) {
+  if (!href) return <span className="mt-4 inline-flex h-4" aria-hidden="true" />
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-flex items-center gap-1.5 text-xs font-medium text-primary transition-colors hover:text-primary/80"
+    >
+      <Github className="h-3.5 w-3.5" />
+      GitHub
+    </a>
+  )
+}
+
+/* --------------------------- featured lead card --------------------- */
+
+function LeadCard({ member }: { member: Member }) {
+  return (
+    <div className="relative flex flex-col items-center gap-6 overflow-hidden rounded-3xl border border-primary/30 bg-primary/5 p-8 text-center sm:flex-row sm:items-center sm:text-left md:p-10">
+      {/* soft glow */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -right-16 -top-16 h-56 w-56 rounded-full opacity-50"
+        style={{
+          background:
+            'radial-gradient(60% 60% at 50% 50%, oklch(0.606 0.187 264 / 0.18) 0%, transparent 70%)',
+        }}
+      />
+
+      {/* avatar */}
+      <span className="relative flex h-24 w-24 flex-shrink-0 items-center justify-center rounded-full bg-primary text-2xl font-semibold tracking-tight text-primary-foreground shadow-sm">
+        {initials(member.username)}
+      </span>
+
+      {/* text */}
+      <div className="relative flex flex-col items-center sm:items-start">
+        <span className="inline-flex items-center gap-1.5 rounded-full bg-primary/15 px-3 py-1 text-[0.7rem] font-semibold uppercase tracking-wider text-primary">
+          <Crown className="h-3 w-3" />
+          Lead
+        </span>
+        <span className="mt-3 text-xl font-semibold tracking-tight md:text-2xl">
+          @{member.username}
+        </span>
+        <span className="mt-1 text-sm text-muted-foreground md:text-base">
+          {member.role}
+        </span>
+        <div className="mt-4">
+          <GithubLink href={member.github} />
+        </div>
+      </div>
+    </div>
+  )
 }
 
 /* ------------------------------ member card ------------------------- */
@@ -68,19 +118,9 @@ function MemberCard({ member }: { member: Member }) {
       <span className="mt-1 text-sm text-muted-foreground">{member.role}</span>
 
       {/* github (optional) */}
-      {member.github ? (
-        <a
-          href={member.github}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="mt-4 inline-flex items-center gap-1.5 text-xs font-medium text-primary transition-colors hover:text-primary/80"
-        >
-          <Github className="h-3.5 w-3.5" />
-          GitHub
-        </a>
-      ) : (
-        <span className="mt-4 inline-flex h-4" aria-hidden="true" />
-      )}
+      <div className="mt-4">
+        <GithubLink href={member.github} />
+      </div>
     </div>
   )
 }
@@ -109,6 +149,8 @@ function GroupHeading({
 /* ------------------------------- the page --------------------------- */
 
 export default function TeamPage() {
+  const [lead, ...restDevs] = DEVS
+
   return (
     <div className="flex min-h-screen flex-col bg-background">
       <Navbar />
@@ -138,11 +180,20 @@ export default function TeamPage() {
               title="Developers"
               desc="The people writing Prysm's code: cryptography, Tor networking, and the interface."
             />
-            <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-              {DEVS.map((m) => (
-                <MemberCard key={m.username} member={m} />
-              ))}
+
+            {/* Lead — featured */}
+            <div className="mt-10">
+              <LeadCard member={lead} />
             </div>
+
+            {/* Other developers */}
+            {restDevs.length > 0 && (
+              <div className="mt-5 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+                {restDevs.map((m) => (
+                  <MemberCard key={m.username} member={m} />
+                ))}
+              </div>
+            )}
 
             {/* Testers */}
             <div className="mt-20">
