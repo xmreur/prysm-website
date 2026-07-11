@@ -157,7 +157,7 @@ export function Comparison() {
                 <tr>
                   <th
                     scope="col"
-                    className="sticky left-0 z-10 bg-background/95 px-4 py-4 text-left text-xs font-semibold uppercase tracking-wider text-muted-foreground backdrop-blur sm:px-5"
+                    className="sticky left-0 z-10 bg-background px-4 py-4 text-left text-xs font-semibold uppercase tracking-wider text-muted-foreground sm:px-5"
                   >
                     Security model
                   </th>
@@ -197,7 +197,7 @@ export function Comparison() {
                     {/* criterion (sticky left) */}
                     <th
                       scope="row"
-                      className="sticky left-0 z-10 border-b border-border bg-background/95 px-4 py-4 text-left text-sm font-medium text-foreground backdrop-blur sm:px-5"
+                      className="sticky left-0 z-10 border-b border-border bg-background px-4 py-4 text-left text-sm font-medium text-foreground sm:px-5"
                     >
                       {row.criterion}
                     </th>
