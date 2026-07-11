@@ -15,18 +15,12 @@ const FG = 'var(--foreground)'
 
 export function PrysmMark({ className }: { className?: string }) {
   return (
-    <svg
-      viewBox="0 0 32 32"
-      fill="none"
+    <img
+      src="/logo.png"
+      alt="Prysm logo"
       className={className}
-      aria-hidden="true"
-    >
-      <rect width="32" height="32" rx="9" fill={BLUE} />
-      {/* onion / concentric arcs */}
-      <circle cx="16" cy="16" r="9" stroke="white" strokeWidth="1.6" opacity="0.55" />
-      <circle cx="16" cy="16" r="5.5" stroke="white" strokeWidth="1.6" opacity="0.8" />
-      <circle cx="16" cy="16" r="2" fill="white" />
-    </svg>
+      draggable={false}
+    />
   )
 }
 

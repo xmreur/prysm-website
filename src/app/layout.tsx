@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "xmreur" }],
   icons: {
-    icon: "/favicon.ico",
+    icon: "/logo.png",
   },
   openGraph: {
     title: "Prysm — Encrypted Messaging on Tor",
