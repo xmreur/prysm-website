@@ -29,7 +29,7 @@ const DEVS: Member[] = [
     github: 'https://github.com/xmreur',
     avatar: '/team/xmreur.jpeg',
   },
-  { username: 'ClayRootKit', role: 'Developer' },
+  { username: 'ClayRootKit', role: 'Developer', avatar: '/team/clayrootkit.jpg' },
   { username: 'mrbuondi', role: 'Developer' },
 ]
 
