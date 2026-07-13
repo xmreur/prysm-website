@@ -13,6 +13,7 @@ const NAV_LINKS = [
   { href: '/#how-it-works', label: 'How it works' },
   { href: '/#technology', label: 'Technology' },
   { href: '/#comparison', label: 'Comparison' },
+  { href: '/papers', label: 'Papers' },
   { href: '/team', label: 'Team' },
   { href: '/#download', label: 'Download' },
 ]
