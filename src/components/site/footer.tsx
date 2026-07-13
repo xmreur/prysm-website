@@ -22,6 +22,7 @@ const COLUMNS = [
       { label: 'Features', href: '/#features' },
       { label: 'How it works', href: '/#how-it-works' },
       { label: 'Technology', href: '/#technology' },
+      { label: 'White Papers', href: '/papers' },
       { label: 'Team', href: '/team' },
     ],
   },
