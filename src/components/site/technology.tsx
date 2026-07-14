@@ -27,10 +27,11 @@ const STACK = [
 ]
 
 const ROADMAP = [
-  'Mobile Tor embedding',
-  'Group messaging',
-  'Photo & video support',
-  'File sharing',
+  'Mac/iOS support',
+  'More UI customization',
+  'Group calls',
+  'Stabilization',
+  'Self hostable relays',
 ]
 
 export function Technology() {
